@@ -54,6 +54,9 @@
                                 </li>
                                 @if(auth()->user()->admin)
                                     <li>
+                                        <a href="{{ url('/admin/categories') }}">Gestionar categorías</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ url('/admin/products') }}">Gestionar productos</a>
                                     </li>
                                 @endif
@@ -61,7 +64,7 @@
                                     <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                        Desconectarse
+                                        Cerrar sesión
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -111,4 +114,5 @@
     <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
     <script src="{{ asset('/js/material-kit.js') }}" type="text/javascript"></script>
 
+    @yield('scripts')
 </html>
