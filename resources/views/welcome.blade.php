@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('body-class','landing-page')
-@section('title','Bienvenido a App Shop')
+@section('title','Bienvenido a '. config('app.name') )
 @section('styles')
     <style>
         .team .row .col-md-4 {
@@ -18,6 +18,7 @@
           display: flex;
           flex-direction: column;
         }
+        
         .tt-query {
           -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
              -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -64,7 +65,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="title">Bienvenido a App Shop</h1>
+                <h1 class="title">Bienvenido a {{ config('app.name') }}</h1>
                 <h4>Realiza pedidos en linea y te contactaremos para cordinar la entrega</h4>
                 <br />
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger btn-raised btn-lg">
