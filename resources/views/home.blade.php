@@ -10,7 +10,7 @@
 <div class="main main-raised">
     <div class="container">
         <div class="section">
-            <h2 class="title " >Dashboard</h2>
+            <h2 class="title text-center" >Panel de compras</h2>
             @if (session('notification'))
                 <div class="alert alert-success">
                     {{ session('notification') }}
@@ -74,7 +74,7 @@
                         @endforeach
                     </tbody>
             </table>
-            <p><strong>Importe a pagar</strong>{{ auth()->user()->cart->total }}</p>
+            <p><strong>Importe a pagar: </strong>{{ auth()->user()->cart->total }}</p>
             <div class="text-center">
                 <form method="post" action="{{ url('/order') }}">
                 {{ csrf_field() }}
